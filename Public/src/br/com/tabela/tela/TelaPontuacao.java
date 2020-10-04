@@ -68,15 +68,16 @@ public class TelaPontuacao extends javax.swing.JFrame {
 
         tblResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Placar", "Min Temp", "Max Temp", "Recorde Min", "Recorde Max"
             }
         ));
+        tblResultado.setEnabled(false);
         jScrollPane1.setViewportView(tblResultado);
 
         lblSoma.setText("jLabel2");
@@ -98,12 +99,12 @@ public class TelaPontuacao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)))
-                .addGap(88, 88, 88)
+                        .addComponent(jLabel1))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMinTemp)
                     .addComponent(jLabel3)
@@ -227,7 +228,7 @@ public class TelaPontuacao extends javax.swing.JFrame {
                 lblMinTemp.setText(String.valueOf(min_temp));
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Erro Na soma" + e);
+            JOptionPane.showMessageDialog(this, "Erro Na soma");
         }
 
     }

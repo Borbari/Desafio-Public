@@ -34,4 +34,5 @@ public class limiteNumeros extends PlainDocument {
             String nova = str.substring(0, getLength() - quantidadeMax);
             super.insertString(offset, nova, attr);
         }
+   
 }
